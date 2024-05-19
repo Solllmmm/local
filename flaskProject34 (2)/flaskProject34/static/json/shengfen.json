@@ -1,0 +1,282 @@
+[
+    {
+        "name": "全国各省平均aqi",
+        "symbolSize": 20,
+        "value": 56,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#ff7676"
+        }
+    },
+    {
+        "name": "上海",
+        "symbolSize": 26.61006289308176,
+        "value": 79.83018867924528,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#45c2f5"
+        }
+    },
+    {
+        "name": "云南",
+        "symbolSize": 18.47189465408805,
+        "value": 55.415683962264154,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#f5b042"
+        }
+    },
+    {
+        "name": "内蒙古",
+        "symbolSize": 22.20440251572327,
+        "value": 66.61320754716981,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#8e44ad"
+        }
+    },
+    {
+        "name": "北京",
+        "symbolSize": 33.09276729559748,
+        "value": 99.27830188679245,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#f39c12"
+        }
+    },
+    {
+        "name": "吉林",
+        "symbolSize": 23.92348008385744,
+        "value": 71.77044025157232,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#3498db"
+        }
+    },
+    {
+        "name": "四川",
+        "symbolSize": 24.883722671458518,
+        "value": 74.65116801437556,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#2ecc71"
+        }
+    },
+    {
+        "name": "天津",
+        "symbolSize": 33.42138364779874,
+        "value": 100.26415094339623,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#e74c3c"
+        }
+    },
+    {
+        "name": "宁夏",
+        "symbolSize": 22.884905660377356,
+        "value": 68.65471698113207,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#9b59b6"
+        }
+    },
+    {
+        "name": "安徽",
+        "symbolSize": 29.25383254716981,
+        "value": 87.76149764150944,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#1abc9c"
+        }
+    },
+    {
+        "name": "山东",
+        "symbolSize": 30.12264150943396,
+        "value": 90.36792452830188,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#f1c40f"
+        }
+    },
+    {
+        "name": "山西",
+        "symbolSize": 34.062893081761004,
+        "value": 102.18867924528301,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#e67e22"
+        }
+    },
+    {
+        "name": "广东",
+        "symbolSize": 21.077118897873614,
+        "value": 63.231356693620846,
+        "draggable": true,
+        "itemStyle": {"color": "rgba(255, 191, 0, 1)"}
+    },
+    {
+        "name": "广西",
+        "symbolSize": 20.78167115902965,
+        "value": 62.34501347708895,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#16a085"
+        }
+    },
+    {
+        "name": "新疆",
+        "symbolSize": 29.979559748427672,
+        "value": 89.93867924528301,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#c23531"
+        }
+    },
+    {
+        "name": "江苏",
+        "symbolSize": 30.15762578616352,
+        "value": 90.47287735849056,
+        "draggable": true,
+        "itemStyle": {"color": "rgba(255, 45, 0, 1)"}
+    },
+    {
+        "name": "江西",
+        "symbolSize": 22.69639794168096,
+        "value": 68.08919382504288,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#61a0a8"
+        }
+    },
+    {
+        "name": "河北",
+        "symbolSize": 35.09119496855346,
+        "value": 105.27358490566037,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#d48265"
+        }
+    },
+    {
+        "name": "河南",
+        "symbolSize": 33.54568997410285,
+        "value": 100.63706992230854,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#d14c3e"
+        }
+    },
+    {
+        "name": "浙江",
+        "symbolSize": 23.014574813882774,
+        "value": 69.04372444164832,
+        "draggable": true,
+        "itemStyle": {"color": "rgba(255, 64, 0, 1)"}
+    },
+    {
+        "name": "海南",
+        "symbolSize": 12.419025157232705,
+        "value": 37.257075471698116,
+        "draggable": true,
+        "itemStyle": {"color": "rgba(255, 215, 0, 1)"}
+    },
+    {
+        "name": "湖北",
+        "symbolSize": 26.711054668601836,
+        "value": 80.13316400580551,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#4FA240"
+        }
+    },
+    {
+        "name": "湖南",
+        "symbolSize": 23.363656783468105,
+        "value": 70.09097035040432,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#578E32"
+        }
+    },
+    {
+        "name": "甘肃",
+        "symbolSize": 21.893867924528305,
+        "value": 65.68160377358491,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#87CEEB"
+        }
+    },
+    {
+        "name": "福建",
+        "symbolSize": 20.183088749126487,
+        "value": 60.54926624737946,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#00B2EE"
+        }
+    },
+    {
+        "name": "西藏",
+        "symbolSize": 20.31716082659479,
+        "value": 60.95148247978437,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#8B814C"
+        }
+    },
+    {
+        "name": "贵州",
+        "symbolSize": 18.89325646401118,
+        "value": 56.67976939203354,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#73A460"
+        }
+    },
+    {
+        "name": "辽宁",
+        "symbolSize": 25.92714884696017,
+        "value": 77.78144654088051,
+        "draggable": true,
+         "itemStyle": {
+            "color": "#548B54"
+        }
+    },
+    {
+        "name": "重庆",
+        "symbolSize": 25.141509433962266,
+        "value": 75.4245283018868,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#548B54"
+        }
+    },
+    {
+        "name": "陕西",
+        "symbolSize": 29.545911949685532,
+        "value": 88.6377358490566,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#A4D3EE"
+        }
+    },
+    {
+        "name": "青海",
+        "symbolSize": 23.05326257861635,
+        "value": 69.15978773584905,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#89D9A5"
+        }
+    },
+    {
+        "name": "黑龙江",
+        "symbolSize": 20.86272375423319,
+        "value": 62.58817126269957,
+        "draggable": true,
+        "itemStyle": {
+            "color": "#72A1E4"
+        }
+    }
+]

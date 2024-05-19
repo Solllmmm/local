@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+    <script src="../static/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../static/js/echarts.min.js"></script>
+<script type="text/javascript" src="../static/js/china.js"></script>
+<link rel="stylesheet" href="../static/css/comon0.css">
+<link rel="stylesheet" href="../static/css/loading.css">
+<link rel="stylesheet" href="../static/css/fg.css">
+</head>
+<body>
+
+	<ul class="clearfix">
+			<!-- 左边整图 -->
+			<li>
+				<!-- 左图1-固定 -->
+				<div class="boxall" style="height:320px;">
+					<div class="alltitle">空气质量情况占比</div>
+				    <div class="navboxall" id="echart1" ></div>
+				</div>
+				<!-- 左图2-固定 -->
+				<div class="boxall" style="height:360px;">
+<!--					<img class="bll" src="../static/images/b2.png">-->
+					<div class="alltitle">数据轮播图</div>
+					<div class="navboxall" id="echart2"></div>
+				</div>
+	<!-- </div> -->
+				<!-- 左图3-饼图 -->
+				<div class="boxall" style="height:360px;">
+<!--					<img class="bll" src="../static/images/b2.png">-->
+					<div class="alltitle">全国aqi top5省份</div>
+					<div class="navboxall" id="echart3" style="height:320px;"></div>
+				</div>
+	        </li>
+			<!-- 中间 -->
+			<li>
+				<!-- 中上-仪表盘图 -->
+				<div class="boxall" style="height:230px">
+<!--					<img class="bll" src="../static/images/b1.png">-->
+					<div class="clearfix navboxall" style="height: 100%">
+						<div class="pulll_left zhibiao">
+							<div class="zb1"><span>PM2.5</span>
+								<div id="zb1"></div>
+							</div>
+							<div class="zb2"><span>PM10</span>
+								<div id="zb2"></div>
+							</div>
+							<div class="zb3"><span>SO2</span>
+								<div id="zb3"></div>
+							</div>
+						</div>
+						<div class="pulll_right zhibiao ">
+							<div class="zb4"><span>NO2</span>
+								<div id="zb4"></div>
+							</div>
+							<div class="zb5"><span>CO</span>
+								<div id="zb5"></div>
+							</div>
+							<div class="zb6"><span>O3</span>
+								<div id="zb6"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 中下-地图 -->
+				<div class="boxall" style="height:500px">
+<!--					<img class="bll" src="../static/images/b1.png">-->
+					<div class="alltitle">地图</div>
+                    <div class="animbox">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+					<div class="navboxall" id="map"></div>
+				</div>
+				<div class="boxall" style="height:310px">
+<!--					<img class="bll" src="../static/images/b1.png">-->
+					<div class="alltitle">天气状况及预测</div>
+					<div class="navboxall" id="echart4"></div>
+				</div>
+			</li>
+			<!-- 右图 -->
+			<li>
+				<div class="boxall" style="height:350px">
+<!--					<img class="bll" src="../static/images/b1.png">-->
+					<div class="alltitle">当前aqi</div>
+					<div class="navboxall" id="echart5"></div>
+				</div>
+
+				<div class="boxall" style="height: 350px">
+<!--					<img class="bll" src="../static/images/b1.png">-->
+					<div class="alltitle">生活指数</div>
+					<div class="navboxall" id="echart6">
+                        <div class="grid">
+                             <div class="container">
+                                <div class="content">
+                                    <img src="../static/icon/空气清新%20(1).png" alt="Description" />
+                                    <div class="text" id="r1kq"></div>
+                                </div>
+                                <div class="hidden-content">
+                                    <p id="r2kq" style="color: rgba(255,255,255,1)"></p>
+                                </div>
+                            </div>
+                                <div class="container" >
+                                <div class="content">
+                                    <img src="../static/icon/伞.png" alt="Description" />
+                                    <div class="text" id="r1cx" ></div>
+                                </div>
+                                <div class="hidden-content">
+                                    <p id="r2cx" style="color: rgba(255,255,255,1)">This is more detailed information that appears on hover.</p>
+                                </div>
+                            </div>
+                                <div class="container">
+                                <div class="content">
+                                    <img src="../static/icon/运动1.png" alt="Description" />
+                                    <div class="text" id="r1yd"></div>
+                                </div>
+                                <div class="hidden-content">
+                                    <p id="r2yd" style="color: rgba(255,255,255,1)"></p>
+                                </div>
+                            </div>
+                                <div class="container" >
+                                <div class="content">
+                                    <img src="../static/icon/较易发1.png" alt="Description" />
+                                    <div class="text" id="r1yw"></div>
+                                </div>
+                                <div class="hidden-content">
+                                    <p id="r2yw" style="color: rgba(255,255,255,1)">This is more detailed information that appears on hover.</p>
+                                </div>
+                            </div>
+
+                            </div>
+
+                    </div>
+				</div>
+
+				<div class="boxall" style="height:340px">
+<!--					<img class="bll" src="../static/images/b2.png">-->
+					<div class="alltitle">未来5天空气质量预测</div>
+					<div class="navboxall" id="echart7"></div>
+				</div>
+	        </li>
+	    </ul>
+
+<script src="../static/js/logout.js"></script>
+    <script src="../static/js/admin1.js"></script>
+    <script src="../static/js/admin.js"></script>
+    <script type="text/javascript" src="../static/js/js2.js"></script>
+    <script src="../static/js/yubao.js"></script>
+    <script src="../static/js/pan.js"></script>
+    <script src="../static/js/下钻柱状图.js"></script>
+    <script src="../static/js/饼图.js"></script>
+
+    <script src="../static/js/map2.js"></script>
+    <script src="../static/js/listroll.js"></script>
+
+</body>
+</html>

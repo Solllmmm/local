@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>全国大气污染查询</title>
+    <script src="../static/js/echarts.min.js"></script>
+    <style>
+body {
+    color: rgba(255, 255, 255, 0);
+    font-size: 16px;
+    background: url("../static/img/blue.png") no-repeat;
+    background-size: 100% 100%;
+    height:1200px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+label {
+    font-size: 20px;
+}
+input[type="text"] {
+    font-size: 18px; /* Increase the font size to 12px */
+    padding: 5px;
+    height: 31.6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+select {
+    font-size: 15px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+button {
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#aqi_fenbu {
+    margin-top: 20px;
+    {#margin-left: auto;#}
+    {#margin-right: auto;#}
+    width: 1000px;
+    height: 600px;
+    padding:50px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #f5f5f5;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    </style>
+</head>
+<body>
+    <form class="container" action="#" method="post">
+        <div>
+            <label for="citySearch">输入城市名称：</label>
+            <input type="text" id="citySearch" value="重庆" placeholder="请输入城市名称" style="width: 120px; font-size: 15px;">
+        </div>
+        <div>
+            <label for="yearSelect">选择年份：</label>
+            <select id="yearSelect">
+                <!-- 在这里填充年份选项 -->
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021" selected>2021</option>
+                <!-- 更多年份选项... -->
+            </select>
+        </div>
+        <div>
+            <label for="airQualitySelect" class="air">选择空气质量指标：</label>
+            <select id="airQualitySelect">
+                <!-- 在这里填充空气质量指标选项 -->
+                <option value="AQI">AQI</option>
+                <option value="PM2.5">PM2.5</option>
+                <option value="PM10">PM10</option>
+                <option value="SO2">二氧化硫(SO2)</option>
+                <option value="NO2">二氧化氮(NO2)</option>
+                <option value="CO">一氧化碳(CO)</option>
+                <option value="O3">臭氧(O3)</option>
+            </select>
+        </div>
+        <button type="submit" id="submitBtn" style="font-size: 15px; margin-right: 100px;">查询</button>
+    </form>
+    <div>
+        <div id="aqi_fenbu" style="margin:0 auto; padding-left:50px; height: 1020px; width: 100%"></div>
+    </div>
+</body>
+    <script src="../static/js/空气质量分布图.js">
+    </script>
+</html>

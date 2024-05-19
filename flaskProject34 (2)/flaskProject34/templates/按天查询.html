@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="../static/js/global.js"></script>
+    <script src="../static/js/echarts.min.js"></script>
+    <script src="../static/js/jquery-1.11.1.min.js"></script>
+    <script src="../static/js/bmap.min%20(1).js"></script>
+    <link rel="stylesheet" href="../static/css/import1.css">
+    <script src="../static/js/echarts-liquidfill.min.js"></script>
+<body>
+
+<div style="width:100%; height:100%">
+    <div class="tit" style="display:flex;width:0 ">
+        <div id="bd">
+            <input type="date" id="date" value="2015-01-01">
+            <button type="submit" id="tj">提交</button>
+        </div>
+        <div id="search">
+                <input type="text" id="city" value="武汉">
+                <button type="submit" id="ss">搜索</button>
+        </div>
+    </div>
+
+    <div style="display:flex; width:100%; height:1000px">
+        <!-- 图1 -->
+        <div id="you"  style="height: 500px;width: 600px"></div>
+        <!-- 图2 -->
+        <div id="shuiqiu" style="height: 500px;width: 600px"></div>
+        <!-- 图3 -->
+        <div id="leida" style="height: 500px;width: 400px"></div>
+    </div>
+</div>
+{#<script src="../static/js/优良率.js"></script>#}
+    <script src="../static/js/leida.js">
+    </script>
+    <script src="../static/js/shuiqiu.js">
+    </script>
+
+</body>
+</html>

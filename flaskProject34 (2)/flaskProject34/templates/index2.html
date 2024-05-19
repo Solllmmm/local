@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh">
+<meta charset="utf-8">
+<title>index</title>
+<script  src="../static/js/jquery-1.11.1.min.js"></script>
+<!--<script src="path/to/liMarquee/jquery.liMarquee.js"></script>-->
+<script type="text/javascript" src="../static/js/echarts.min.js"></script>
+<script type="text/javascript" src="../static/js/china.js"></script>
+<link rel="stylesheet" href="../static/css/comon0.css">
+</head>
+<body>
+
+	<div class="mainbox">
+		<ul class="clearfix">
+			<!-- 左边整图 -->
+			<li>
+				<!-- 左图1-固定 -->
+				<div class="boxall" style="height:320px;">  
+				    <div class="alltitle">各城市aqi状况</div>
+				    <div class="navboxall" id="echart12"></div>
+				</div>
+				<!-- 左图2-固定 -->
+				<div class="boxall" style="height:360px;">
+					<div class="alltitle">各原发性污染占比分析</div>
+					<div class="navboxall" id="echart22"></div>
+				</div>
+	<!-- </div> -->
+				<!-- 左图3-饼图 -->
+				<div class="boxall" style="height:360px;">
+					<div class="alltitle">aqi变化趋势状况</div>
+					<div class="navboxall" id="echart32"></div>
+				</div>
+	        </li>
+			<!-- 中间 -->
+			<li>
+				<!-- 中上-仪表盘图 -->
+				<div class="boxall" style="height:230px">
+					<div class="clearfix navboxall" style="height: 100%">
+						<div class="pulll_left zhibiao">
+							<div class="zb1"><span>PM2.5<br>平均指标</span>
+								<div id="zb12"></div>
+							</div>
+							<div class="zb2"><span>PM10<br>平均指标</span>
+								<div id="zb22"></div>
+							</div>
+							<div class="zb3"><span>SO2<br>平均指标</span>
+								<div id="zb32"></div>
+							</div>
+						</div>
+						<div class="pulll_right zhibiao ">
+							<div class="zb4"><span>NO2<br>平均指标</span>
+								<div id="zb42"></div>
+							</div>
+							<div class="zb5"><span>CO<br>平均指标</span>
+								<div id="zb52"></div>
+							</div>
+							<div class="zb6"><span>O3<br>平均指标</span>
+								<div id="zb62"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 中下-地图 -->
+				<div class="boxall" style="height:500px">
+					<div class="alltitle">地图</div>
+					<div class="navboxall" id="map22"></div>
+				</div>
+				<div class="boxall" style="height:310px">
+					<div class="alltitle">各指标变化趋势状况</div>
+					<div class="navboxall" id="echart42"></div>
+				</div>
+			</li>
+			<!-- 右图 -->
+			<li>
+				<div class="boxall" style="height: 700px; display: flex; flex-direction: column">
+					<div class="alltitle">城市空气质量top10</div>
+					<div class="navboxall" id="echart52" style="flex: 1"></div>
+					<div class="navboxall" id="echart62" style="flex: 1"></div>
+				</div>
+
+				<div class="boxall" style="height:355px">
+					<div class="alltitle">空气质量情况占比</div>
+					<div class="navboxall" id="echart72"></div>
+				</div>
+	        </li>
+	    </ul>
+	</div>
+
+<script  src="../static/js/index2_map.js"></script>
+<script  src="../static/js/js.js"></script>
+
+</body>
+</html>

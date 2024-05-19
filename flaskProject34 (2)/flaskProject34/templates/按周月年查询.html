@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/import.css">
+    <script src="../static/js/global.js"></script>
+    <script src="../static/js/echarts.min.js"></script>
+    <script src="../static/js/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="../static/css/comon0.css">
+</head>
+<body>
+    <div class="container">
+        <div id="search">
+            <input type="text" id="city" value="武汉">
+            <button type="submit" id="ss">搜索</button>
+        </div>
+        <form id="dateForm" action="#" method="post">
+            <select id="period">
+                <option value="week" selected>Week</option>
+                <option value="month">Month</option>
+                <option value="year">Year</option>
+            </select>
+            <input type="date" id="start_time" value="2021-01-01">
+            <button type="submit" id="sx">筛选</button>
+        </form>
+    </div>
+    <div id="line-pie" style="height:1000px;width:100%">
+        <!-- 图表内容 -->
+    </div>
+
+    <script src="../static/js/bin.js"></script>
+</body>
+</html>

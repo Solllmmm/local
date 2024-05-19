@@ -1,0 +1,103 @@
+﻿<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>index</title>
+<script type="text/javascript" src="../static/js/jquery-1.11.1.min.js"></script>
+<!--<script src="path/to/liMarquee/jquery.liMarquee.js"></script>-->
+<script type="text/javascript" src="../static/js/echarts.min.js"></script>
+<script type="text/javascript" src="../static/js/china.js"></script>
+<link rel="stylesheet" href="../static/css/comon0.css">
+</head>
+<body>
+<div id="flash-message" ></div>
+	<div class="head clearfix">
+		<h1 class="pulll_left">空气原发性污染物展示系统</h1>
+		<div class="menu menu2 pulll_left">
+			<ul>      
+				<li><a href="{{ url_for('one_page') }}" class="ajax-link" id="onepage">实时洞察</a></li>
+                <li><a href="{{ url_for('dbcx_page') }}" class="ajax-link">城市对比分析</a></li>
+				<li><a href="{{ url_for('second_page') }}" class="ajax-link">历史数据分析</a></li>
+				<li><a href="{{ url_for('three_page') }}" class="ajax-link">历史周期查询</a></li>
+				<li><a href="{{ url_for('four_page') }}" class="ajax-link">历史纵览</a></li>
+			</ul>
+		</div>
+
+            <div class="info-item" style="position: absolute; left: 999px; top: 23px;">
+            <img src="../static/icon/地图.png" alt="" class="icon">
+            <span>当前城市: <span id="nowcity"></span></span>
+            </div>
+
+            <div class="info-item" style="position: absolute; left: 1154px; top: 23px;">
+                <img src="../static/icon/时间.png" alt="" class="icon">
+                <span>数据更新时间: <span id="updatetime"></span></span>
+            </div>
+
+            <div class="info-item" style="position: absolute; right: 303px; top: 23px;" id="logoutc">
+                <img src="../static/icon/登出账号.png" alt="" class="icon">
+                <span>登出 <span id="logout"></span></span>
+            </div>
+
+            <div class="info-item" style="position: absolute; right: 250px; top: 23px;" id="admin">
+                <img src="../static/icon/用户管理.png" alt="用户管理" class="icon">
+            </div>
+
+		<div class="time" id="showTime">2018/6/12 17:00:12</div>
+	</div>
+
+
+	<div class="mainbox">
+
+	</div>
+
+    <script>
+	var t = null;
+	t = setTimeout(time,1000);//開始运行
+	function time()
+	{
+	   clearTimeout(t);//清除定时器
+	   dt = new Date();
+		var y=dt.getFullYear();
+		var mt=dt.getMonth()+1;
+		var day=dt.getDate();
+	   var h=dt.getHours();//获取时
+	   var m=dt.getMinutes();//获取分
+	   var s=dt.getSeconds();//获取秒
+	   document.getElementById("showTime").innerHTML = y+"/"+mt+"/"+day+" "+h+":"+m+":"+s+"";
+	   t = setTimeout(time,1000); //设定定时器，循环运行
+	}
+</script>
+    <script src="../static/js/tarnsfrom.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    let flashMessage = document.getElementById('flash-message');
+    if (flashMessage) {
+      flashMessage.textContent = "{{ messages|last }}"; // 设置消息文本
+      flashMessage.style.display = 'block'; // 确保在消息显示时改变display样式，使其可见
+
+      // 使用 requestAnimationFrame 来确保 display: block 在浏览器下一个重绘之前被设置
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          flashMessage.style.opacity = '1';
+          flashMessage.style.visibility = 'visible';
+        });
+      });
+
+      setTimeout(() => {
+        flashMessage.style.opacity = '0';
+        flashMessage.style.visibility = 'hidden';
+
+        // 在淡出动画后，设置延迟以确保将display设置为none，完成隐藏过程
+        setTimeout(() => {
+          flashMessage.style.display = 'none'; // 淡出动画完成后，确保display为none
+        }, 1500);  // 根据transition持续时间来设置
+      }, 3000); // 设置显示消息的时间
+    }
+  {% endif %}
+  {% endwith %}
+});
+</script>
+</body>
+</html>
