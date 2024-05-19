@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+    <link rel="stylesheet" href="../static/css/comon0.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+</style>
+</head>
+<body>
+<div id="flash-message" ></div>
+<div class="login-container">
+    <h2 style="padding-bottom:15px;">Register</h2>
+    <form method="post" action="/register">
+        <div class="input-group">
+            <label for="user">Username</label>
+            <input type="text" id="user" name="user" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button class="login-btn" type="submit">注册</button>
+    </form>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    let flashMessage = document.getElementById('flash-message');
+    if (flashMessage) {
+      flashMessage.textContent = "{{ messages|last }}"; // 设置消息文本
+      flashMessage.style.display = 'block'; // 确保在消息显示时改变display样式，使其可见
+
+      // 使用 requestAnimationFrame 来确保 display: block 在浏览器下一个重绘之前被设置
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          flashMessage.style.opacity = '1';
+          flashMessage.style.visibility = 'visible';
+        });
+      });
+
+      setTimeout(() => {
+        flashMessage.style.opacity = '0';
+        flashMessage.style.visibility = 'hidden';
+
+        // 在淡出动画后，设置延迟以确保将display设置为none，完成隐藏过程
+        setTimeout(() => {
+          flashMessage.style.display = 'none'; // 淡出动画完成后，确保display为none
+        }, 1500);  // 根据transition持续时间来设置
+      }, 3000); // 设置显示消息的时间
+    }
+  {% endif %}
+  {% endwith %}
+});
+</script>
+</body>
+
+</html>

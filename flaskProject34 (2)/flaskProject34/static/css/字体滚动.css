@@ -1,0 +1,28 @@
+#lyrics-container {
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#lyrics-container li {
+  text-align: center;
+  opacity: 0; /* 所有歌词默认不可见 */
+  transition: opacity 1s ease; /* 增加透明度变化的平滑过渡 */
+  padding: 10px;
+  margin: 0;
+  list-style-type: none;
+}
+
+#lyrics-container li.active {
+  opacity: 1; /* 当前行完全可见 */
+    color:lawngreen;
+    font-size:20px;
+}
+
+#lyrics-container li.near {
+  opacity: 0.5; /* 前两行和后三行半透明显示 */
+}
+

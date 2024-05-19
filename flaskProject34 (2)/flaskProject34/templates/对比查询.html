@@ -1,0 +1,61 @@
+<!-- 对比查询.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>城市AQI对比查询</title>
+    <!-- 引入ECharts文件 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.1.2/echarts.min.js"></script>
+</head>
+    <style>
+        .container {
+            display: flex;
+        }
+        body {
+    color: rgba(255, 255, 255, 0);
+    font-size: 16px;
+    background: url("../static/img/blue.png") no-repeat;
+    background-size: 100% 100%;
+    height:1200px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+    </style>
+<link rel="stylesheet" href="../static/css/loding-chat.css">
+<link rel="stylesheet" href="../static/css/comon0.css">
+<body>
+    <form id="cityInputForm1" class="cityInputForm" method="post">
+    <input type="text" id="city1" name="city1" placeholder="输入城市1">
+    <input type="button" id="submitBtn1" value="查询">
+</form>
+<!-- 图表容器 -->
+<div class="container">
+    <div id="chart1" style="width: 600px;height:400px;"></div>
+    <div id="chart2" style="width: 600px;height:400px;"></div>
+</div>
+<form id="cityInputForm2" class="cityInputForm" method="post">
+    <input type="text" id="city2" name="city2" placeholder="输入城市2">
+    <input type="button" id="submitBtn2" value="查询">
+</form>
+    <!-- 图表容器 -->
+    <div class="container">
+        <div id="chart3" style="width: 600px;height:400px;"></div>
+        <div id="chart4" style="width: 600px;height:400px;"></div>
+    </div>
+    <button id="report" style="width: 100px;height: 40px;border-radius: 14px;position: absolute;right:523px;top:72px;background: #f0f1f5;">生成报告</button>
+    <div id="chat" style="width:600px;height:800px;background: rgba(76,166,174,0.29);position: absolute;right:20px;top:120px;border-radius: 10px;color:#aae5ec;font-size:22px;">
+        <div class="animbox">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <p id="loadingText" style="display: none; position: relative; top: 160px; text-align: center;left:22px">这可能需要一分钟左右...</p>
+    </div>
+    <script src="../static/js/对比.js">
+    </script>
+    <script src="../static/js/chat.js"></script>
+</body>
+</html>

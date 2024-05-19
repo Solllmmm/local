@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Smooth Scrolling List</title>
+<style>
+.scrollList {
+  width: 300px;
+  height: 150px; /* 高度可以显示约5条数据高度 */
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #333;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.listItem {
+  padding: 5px 10px;
+  background-color: #f3f3f3;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+</style>
+</head>
+<body>
+
+<div id="scrollList" class="scrollList">
+  <!-- 列表项将通过 JavaScript 动态填充 -->
+</div>
+
+<script>
+const dataList = [
+  "Item 1",
+  "Item 2",
+  "Item 3",
+  "Item 4",
+  "Item 5",
+  "Item 6",
+  "Item 7",
+  "Item 8",
+  "Item 9",
+  "Item 10"
+];
+
+const scrollList = document.getElementById('scrollList');
+let offset = 0;
+let scrollRate = 1;
+let frameRate = 20;
+
+// 轮询器函数，用于平滑滚动
+const scroller = () => {
+  offset = (offset > scrollList.scrollHeight / 2) ? 0 : offset + scrollRate;
+  scrollList.scrollTo(0, offset);
+};
+
+dataList.forEach(item => {
+  const div = document.createElement('div');
+  div.className = 'listItem';
+  div.textContent = item;
+  scrollList.appendChild(div);
+});
+
+// 添加重复的元素进行无缝滚动
+dataList.forEach(item => {
+  const div = document.createElement('div');
+  div.className = 'listItem';
+  div.textContent = item;
+  scrollList.appendChild(div);
+});
+
+let scrollInterval = setInterval(scroller, 1000 / frameRate);
+
+// 鼠标悬停暂停滚动
+scrollList.addEventListener('mouseenter', () => {
+  clearInterval(scrollInterval);
+});
+
+// 鼠标移出恢复滚动
+scrollList.addEventListener('mouseleave', () => {
+  scrollInterval = setInterval(scroller, 1000 / frameRate);
+});
+</script>
+
+</body>
+</html>
